@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // tablice - uporzadkowana kolekcja elementow
+      // nie sa typem, a obiektem
+      // moga przechowywac dowolne typy proste i zlozone
+
+      let a = [];
+      let b = [22, "tekst", { a: 1 }, [5, 4, 3], function () {}, null];
+      console.log(b);
+      console.log(b[b.length - 1]); // ostatni element to null
+      console.log(b[0]); // 22
+
+      b[2] = 99;
+
+      console.log(b);
+
+      let c = new Array(12, "abcd", 9);
+      console.log(c);
+      let d = Array(1, 2, 3);
+      console.log(d);
+      let e = [];
+
+      e[0] = "test1";
+      e[1] = "test2";
+      e[2] = "test3"; // length bedzie wskazywalo na tablice o dlugosci 8 nawet jesli faktycznie w tablicy mamy tylko 3 elementy
+      console.log(e);
+      e[e.length] = "test4";
+      console.log(e);
+      e.push("test5");
+      console.log(e);
+
+      // obciecie dlugosci tablicy
+      let f = [0, 1, 2, 3, 4, 5, 6, 7];
+      console.log(f);
+      f.length = 4; // ustawienie nowej dlugosci tablicy, w praktyce elementy na odcientych pozycjach przestaja isniec
+      console.log(f);
+
+      // kasowanie indeksu
+      delete f[1];
+      console.log(f);
+      console.log(f[1]);
+
+      console.log(1 in f); // true lub false, poniewaz indeks nie istnieje
+      console.log(2 in f); //true
+
+      let g = Array(5).fill(7);
+      console.log(g);
+
+      // iterowanie
+      let h = Array(10);
+      for (let i = 0; i < h.length; i++) {
+        h[i] = Math.floor(Math.random() * 100);
+      }
+      console.log(h);
+
+      for (let i = 0; i < h.length; i++) {
+        console.log(h[i]);
+      }
+
+      let arr1 = ["el1", "el2", "el3"];
+
+      arr1.forEach(function (item, index, array) {
+        console.log(item, index);
+      });
+
+      let arr2 = arr1.concat([1, 2, 3]);
+      console.log(arr2);
+
+      let arr3 = arr1.concat([5, 6], [10, 11, 12]);
+      console.log(arr3);
+
+      let strFromArr = arr2.join();
+      console.log(strFromArr); // "el1,el2,el3,1,2,3"
+
+      let strFromArr2 = arr2.join("|");
+      console.log(strFromArr2); // el1|el2|el3|1|2|3
+
+      let arr4 = [1, 2, 3, 4];
+      console.log(arr4.reverse()); // odwrocenie tablicy, modyfikuje oryginalna tablice
+
+      arr4.push(99); // dodaje element na koncu tablicy
+      console.log(arr4);
+
+      let arrEl = arr4.pop(); // pobranie ostatniego elementu z tablicy arr4 i zapianie go do zmiennej arrEl
+      console.log(arrEl); 
+      console.log(arr4); // metoda pop zabiera ten element z oryginalnej tablicy 
+      
+    </script>
+  </body>
+</html>

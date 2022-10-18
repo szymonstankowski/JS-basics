@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let flag = true;
+      if (flag == true) {
+        console.log("prawda");
+      }
+
+      if (flag == false) {
+        // nie wykona sie bo flag ma warosc true
+        console.log("prawda");
+      }
+
+      if (flag) console.log("Zapis skrotowy - wykona sie");
+      // wykrzyknik odwraca wartosc ligiczna
+      flag = false;
+      if (!flag) console.log("Zapis skrotowy - nie wykona sie");
+
+      // falsy values
+      let data = "";
+      if (data) {
+        // w tym kontekscie pusta wartosc data zostanie zamieniona na wartosc boolean
+        // nazywamy to konwersja z jednego typu wartosci na inny
+        // pusty string zostal skonwertowany na false
+        console.log("prawda");
+      }
+
+      /*let data2 = "tekst";
+      if (data2) {
+        // w tym kontekscie pusta wartosc data zostanie zamieniona na wartosc boolean
+        // nazywamy to konwersja z jednego typu wartosci na inny
+        // string zostal skonwertowany na true
+        console.log("prawda");
+      }*/
+
+      // falsy values zawsze konwertowane sa na false
+      // "" pusty string
+      // 0 i -0
+      // 0n BigInt
+      // NaN
+      // Null
+      // Undefined
+      // false
+
+      let data3 = 0
+      if (data3){ // null zostanie sonwertowany na falese
+        console.log("data3 ma wartosc true")
+      }else{
+        console.log("data3 ma warotsc false")
+      }
+
+      // truthly values - prawdziwe wartosci 
+      // te wartosci konwertuja na true
+      // "tekst"
+      // liczby rozne od zera
+      // [], [4, 3, 2]
+      //{}. {a:1}, window, {flag: false}
+      // function test();
+
+      let test = [flag = false];
+      if (test) console.log("prawda: ", test)
+
+      </script>
+  </body>
+</html>

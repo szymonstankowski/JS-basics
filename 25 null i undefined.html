@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data;
+      typeof data; // niezainicjalizowana zmienn alub stala to zawsze undefinied
+      function test() {
+        let undefinied = 2;
+        console.log("wartosc:", undefinied);
+      }
+      test();
+      console.log(typeof undefinied);
+
+      let a; // zmienna niezdefiniowana, nie przechowuje wartosci
+      a; // undefined
+      console.log(a);
+      if (a == undefined) {
+        console.log("a jest undefined");
+      }
+
+     /*b; // zmienna niezadeklarowana, zwraca blac ReferenceError
+      // b is not defined nie opisuje prawidlowo
+
+      console.log(b);
+      typeof b; // zmienna niezadeklarowan aw tyoeif rowniez pokazuje undefined
+      // kiedy faktycznie jest undeclared ale prgram nie bedzie dzialal dalej
+      console.log(b);*/
+
+      let data1 = 10; // przypisana wartosc 10
+      data1 = null; // teraz data nie ma wartosci, jest null
+
+      typeof null;
+      console.log(typeof data1); // zwroci object pomimo tego ze to jest prymityw, jest to blad ktory nie zostanie naprawiony
+
+      if (null) {
+        console.log(null);
+      } // nie wykona sie bo null jest zamieniony na false
+      if (undefined) {
+        console.log(null);
+      }// nie wykona sie bo undefined jest zamieniony na false
+
+      // undefined i false to falsy values
+
+      //proste porownaniem tylko wartosci, jesli nie sa tego samego tyou
+      // to bedzie konwersja
+      if (null == undefined) console.log("true, wykona sie, przy uzyciu porownania prostego ==");
+
+      //porownanie scisle, typy sie nie zgadzaja, wiec nie jest rowne
+      if (null === undefined) console.log("false, NIE wykona sie bo null i undefinied to nie sa te same typy, porownanie ===");
+    </script>
+  </body>
+</html>
