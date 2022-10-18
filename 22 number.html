@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // number jest to typ wartosci zmiennoprzecinkowy 64bitowy
+      // pozwala na zapis liczb calkowitych i dziesietnych
+      let a = 10; // liczba calkowita
+      let b = 1.456; // liczba zmiennoprzecinkowa
+      let c = 0xf; // 15 - liczba szesnastkowa
+      const d = 0.45; // to samo co 0.45, mozna pominac zero
+
+      // maksymalna bezpieczna liczba calkowita dodatnia i ujemna
+
+      console.log(Number.MAX_SAFE_INTEGER); // max liczba calkowita ktora mozemy
+      // zapisac w zmiennej/stalej
+      console.log(Number.MIN_SAFE_INTEGER); // min calkowita
+
+      console.log(Number.isSafeInteger(9007199254740991)); // true
+      console.log(Number.isSafeInteger(90071992547409912)); // false
+
+      // NaN - Not a Number - specjalna warosc okreslajaca ze cos
+      // nie jest liczba
+
+      const someN = 0 / 0;
+      console.log(someN); // NaN
+
+      console.log(Math.sqrt(-1)); // NaN
+
+      // parseInt() - konwersja znakow na liczbe
+      let someNum = parseInt("12.345"); // parsowanie stringa do number
+      console.log(someNum);
+
+      console.log(parseInt("tekst.1234")); // NaN
+
+      console.log(isNaN(0 / 0)); // NaN
+      console.log(Number.isNaN(67)); // false
+    </script>
+  </body>
+</html>

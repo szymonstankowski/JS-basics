@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // string - ciag znakow UTF-16
+      const num = 78;
+      const s1 = "";
+      const s2 = "";
+      // literal szablonu
+      const s3 = `
+      string 
+      w 
+      wielu 
+      liniach ${num}
+      wyrazenia js: ${1 + 2 + 3}`;
+      console.log(s3);
+
+      console.log("tekst".length);
+      console.log("tekst"[2]);
+      console.log(s3[s3.length - 1]);
+      console.log(s3.charAt(7));
+      console.log("tekst".charCodeAt(1));
+
+      // wyszukiwanie slow w tekscie
+      let simpleText = "Ala ma kota, a Ania ma psa";
+      let pos = simpleText.indexOf("Ania"); // Ania jest pod indexem 15
+      console.log(pos);
+
+      pos = simpleText.lastIndexOf("ma"); // wyszukiwanie od konca
+      console.log(pos);
+
+      //drugi argument podajemy kiedy chcemy wyszukaco od konkretnego miejsca
+      pos = simpleText.indexOf("ma", 6); //
+      console.log(pos);
+
+      pos = simpleText.lastIndexOf("ma", 10);
+      console.log(pos); //4
+      // metoda trim()
+      console.log("       tekst        spacje i     spacje".trim());
+      console.log(
+        ` 
+
+
+      dsds
+          `.trim()
+      );
+
+      console.log("ala".toUpperCase());
+      console.log("ALA".toLowerCase());
+
+      const result = "text";
+      const str1 = "something " + result;
+
+      console.log(str1);
+
+      let str2 = "test".concat(" other test");
+      console.log(str2);
+
+      let str3 = "0123456789";
+      console.log(str3.slice(2));
+
+      console.log(str3.slice(4, 8));
+      console.log(str3.slice(4, 9));
+      console.log(str3.slice(-3));
+      console.log(str3.slice(-6 - 2));
+
+      console.log(str3.substr(0));
+      console.log(str3.substr(5));
+      console.log(str3.substr(5));
+
+      // split() dzieli string ze wzgledi na przekazany znak i zwraca tablice
+
+      let str6 = "a1 b2 b3 d4 e5";
+
+      let dataStr6 = str6.split(" ");
+      console.log(dataStr6);
+
+      // replace() zamienia slowa w stringu
+
+      let str7 = "Ala ma kota";
+      let str8 = str7.replace("kota", "psa");
+      console.log(str8);
+    </script>
+  </body>
+</html>

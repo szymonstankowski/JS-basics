@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // zmienna temperature, wartosci pd -10, 0, 10, 20, 30, 40
+      // informacja ze wzgledu na temperature czy jest  : b. zimno
+      // zimno - 0, 10 - wiosna, 20 - lato, 30 - goraco, 40 - b. goraco
+      // dla temperature < -10 zostajemy w domu
+      // dla temperature > 40 zostajemy w domu
+
+      // 1 wersja if else if
+
+      let temperature = 41;
+      let temperature1 = 0;
+
+      if (temperature < -10) {
+        console.log("Zostajemy w domu");
+      } else if (temperature == -10) {
+        console.log("B. Zimno");
+      } else if (temperature == 0) {
+        console.log("Zimno");
+      } else if (temperature == 10) {
+        console.log("Wiosna");
+      } else if (temperature == 20) {
+        console.log("Lato");
+      } else if (temperature == 30) {
+        console.log("Goraco");
+      } else if (temperature == 40 || temperature < -10) {
+        console.log("B. Goraco");
+      } else if (temperature > 40) {
+        console.log("Zostajemy w domu");
+      }
+
+      // 2 wesja switch
+      switch (temperature1) {
+        case -10:
+          console.log("B. Zimno");
+          break;
+        case 0:
+          console.log("Zimno");
+          break;
+        case 10:
+          console.log("Wiosna");
+          break;
+        case 20:
+          console.log("Lato");
+          break;
+        case 30:
+          console.log("Goraco");
+          break;
+        case 40:
+          console.log("B. Goraco");
+          break;
+        default:
+          console.log("Zostajemy w domu");
+      }
+    </script>
+  </body>
+</html>

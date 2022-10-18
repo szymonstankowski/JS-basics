@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // wartosc poczatkowa licznika to -2
+      // licznik sprawdzamy czy jest mniejszy rowy 2
+      // w kazdej iteracji sprawdzamy i wyswietlamy
+      // czy liczba jest ujemna/rowna 0/dodatnia
+
+      let i = -2;
+      while (i <= 2) {
+        if (i < 0) {console.log("Liczba ujemna", i)
+        } else if (i == 0) {
+          console.log("Counter = ", i);
+        } else {
+          console.log("Liczba dodatnia", i);
+        }
+        i++;
+      }
+      console.log("Koniec petli while")
+
+      for(let i = -2; i <=2; i++){
+        if (i < 0) {console.log("Liczba ujemna", i)
+        } else if (i == 0) {
+          console.log("Counter = ", i);
+        } else {
+          console.log("Liczba dodatnia", i);
+        }
+        i++;
+      }
+    </script>
+  </body>
+</html>

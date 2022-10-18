@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dynamicznie typowany jezyk
+        let num = 89; // liczba - Number
+        let data = 10; // liczba - Number
+        console.log(data);
+        data = "Hello1"; // tekst - String
+        console.log(data);
+        data = 'Hello2'; // tekst - String - mozna pisac w apostrofach ale wtedy wszystko musy byc w apostrofach
+        console.log(data);
+        data = `Hello
+        World
+        and ${num}
+        hello 
+        again`; // tekst - lancuch znakow - String w backtickach - nazywany template literals
+        console.log(data);
+        
+        let flag = true; 
+        console.log(flag);
+        flag = false; // dynamicznie typowanie jezyka, zmiana wartosci dla tej samej zmiennej
+        console.log(flag);
+        let someValue; // Brak przypisania wartosci podczas deklaracji zmiennej wprzypisuje wartosc Undefined
+        console.log(someValue);
+        someValue = 77;
+        console.log(someValue);
+        someValue = null;
+        console.log(someValue);
+
+        // Inne typy proste
+        // Symbol
+        // BigInt
+
+        // Zmienne zawsze deklarujemy przed ich uzyciem
+
+        let name = "Ania";
+        // dopiero pozniej uzycie zmiennej
+        console.log(name);
+
+        // nigdy nie duplikowac deklaracji let name = "Daniel";
+        // zmieniamy wartosc zmiennej bez slowa kluczowego let/const/var itd
+        name = "Daniel"
+        console.log(name);
+
+
+
+
+    </script>
+</body>
+</html>

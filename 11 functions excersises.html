@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // funkcja substract
+
+      function substract(a, b) {
+        let result = a - b;
+        return result;
+      }
+      console.log("Wynik odejmowania:",substract(55, 15));
+
+      // funkcja do obliczenia wartosci bezwzglednej
+
+      function absoluteValue(a, b) {
+        let result = substract(a, b);
+
+        if (result < 0) {
+          return result * (-1);
+        } else {
+          return result;
+        }
+      }
+
+      console.log("Wartosc bezwzgledna:",absoluteValue(10, 25));
+    </script>
+  </body>
+</html>
