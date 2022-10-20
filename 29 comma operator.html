@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // operator przecinka umozliwia umieszczenie wielu wyrazen, gdzie zwykle umieszcza sie jedno
+      // dosc zadko uzywany
+
+      for (let i = 0, j = 5; i < 5; i++, j--) {
+        console.log("i:" + i + " j:" + j);
+      }
+
+      // uperatory jednoargumentowaw unary
+      // takie operatory przyjmuja jeden operand
+
+      let obj = { str: "text" };
+      console.log(obj.str);
+      delete obj.str;
+      console.log(obj.str);
+
+      typeof 123.45; // number, operator zwraca typ wartosci
+
+      let c = +"27"; // operator + konwertuje operand na liczbe
+      let d = -"27"; // operator - konwertuje operand na liczbe ujemna
+      let e = void 0; // void wywoluje wyrazenie i zwraca undefined
+      //inkrementacja i dekrementacja to rowniez operatory jednoargumentowa
+
+      // operatory relacyjne
+      // takie operatory porownuja operandy i zwracaja treu jesli spelniaja porownanie
+
+      let obj1 = { num: 10 };
+
+      if ("num" in obj1) console.log("zmienna num w obj1");
+
+      let arr = ["one", "two", "three"];
+      if (1 in arr) console.log("indeks 1 jest w tablicy");
+      if("length" in arr) console.log("wlasciwosc length jest w tablicy")
+
+      // instanceof sprawdza czy dany obiekt jest okreslonego typu
+
+      let date = new Date(2020,12,20)
+      if (date instanceof Date) console.log("true")
+
+    </script>
+  </body>
+</html>

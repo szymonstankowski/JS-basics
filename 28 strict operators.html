@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // luzne porownanie roznych typow, number i string
+      // string zostanie przeksztalcony na number i nastapi konwersja
+      if (5 == "5") console.log("true, to ta sama wartosc 5");
+
+      // scisle porownanie
+      // typy sie nie zgadzaja
+      if (5 === "5") console.log("false, rozne typy"); // nie wykona sie
+
+      if (5 === 5) console.log("typy sie zgadzaja");
+
+      // operatory porownania a obiekty
+
+      if (10 === { a: 10 }) console.log("false"); // false nie wykona sie
+      if (10 == { a: 10 }) console.log("false"); // false nie wykona sie
+
+      // najcesciej porownywac bedizemy obiekty,
+      // przy takim porowanniu nie jest porownywana zawartosc obiektu ale ich adresy
+
+      let a = { data: 22 };
+      if (a == a) console.log("true");
+
+      let c = { data: 22 };
+      let d = { data: 22 };
+      if (c == d) console.log("false"); // rozne adresy w pamieci wiec rozne obiekty
+
+      // operator warunkowy ustala wartosc wyrazenia, jesli bedize prawda
+      // to wykonane zostanie prierwsez polecenie, jesli falsze to drugie
+      // warunek? wartosc1 : wartosc2
+
+      let age = 18;
+      let data = age >= 18 ? "dorosly" : "nieletni";
+      console.log(age >= 18 ? "dorosly" : "nieletni");
+      console.log(data);
+      // to to samo co
+
+      if (age >= 18) {
+        data = "dorosly";
+      } else {
+        data = "nieletni";
+      }
+    </script>
+  </body>
+</html>

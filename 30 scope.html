@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ZAKRES
+      // Scope jezykow programowania fefiniowany jest przez blok kodu
+      // ale nie w JavaScript
+      // W  JS wyrozniamy zakres globalny oraz lokalny. Zakres to widocznosc
+      // zmiennych dla poszczegolnych czesci programu
+
+      // Zakres Globalny isnieje przez cale zycie skryptu,
+      // raz zadeklarowana zmienna juz tam pozostanie
+      // z wyjatkiem uzycie na nie delete
+      // Globalna zmienna moze byc uzywana wewnatrz oraz poza funkcja,
+      // w praktyce gdziekolwiek w biezacym dokumencie
+      // W przegladarce window jest obiektem globalnym
+
+      // Zakres lokalny isnieje wewnatrz ciala funkcji w ktorej zmienna
+      // zostala zadeklarowana, wlaczajac argumenty funkcji
+
+      let someGlobal = "Ala ";
+
+      function test1(param) { // argument jest zmienna lokalna
+        let txt = " kota"; // zmienna lokalna, zakres lokalny
+        console.log(someGlobal + param + txt); // dostep do zmiennej globalnej wewnatrz funkcji
+      }
+
+      test1("ma"); // "Ala ma kota"
+      //console.log(txt); // ReferenceError: txt is not defined, bo zmienna txt ma zakres lokalny
+
+
+      // PRSZESLANIECIE ZMIENNYCH GLOBALNYCH
+
+      var someData = 99;
+      function test2(){
+        var someData = 1000; // 
+        console.log("lokalne someData:", someData);
+        console.log("globalne someData:", window.someData );
+      };
+
+      test2();
+      
+
+      function test3(){
+        let a = 5;
+        b = 10 // zmienna globalna!
+      };
+      // console.log(b); // ReferenceError: b is not defined
+
+      test3();
+      console.log(b); // 10
+      console.log(window.b); // 10
+
+      function doSomething(){
+        "use strict";
+        var a = 5;
+        b = 10;
+      };
+
+      doSomething();
+
+    </script>
+  </body>
+</html>
